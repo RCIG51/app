@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent {
+  celear(){
+    this.mainDisply='0';
+    this.oldNumber='';
+    this.operator=''
+  }
   mainDisply: string = '0';
-  oldNumber: string = '0';
+  oldNumber: string = '';
   operator: string = '';
 
   digitclick(digi: string) {
@@ -21,6 +26,7 @@ export class CalculatorComponent {
   }
   equal() {
     const a = Number(this.oldNumber);
+    this.oldNumber='';
     const b = Number(this.mainDisply);
     switch (this.operator) {
       case '+':
@@ -39,5 +45,6 @@ export class CalculatorComponent {
       default:
         break;
     }
+    this.operator='';
   }
 }
