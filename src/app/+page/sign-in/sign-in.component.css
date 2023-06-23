@@ -1,6 +1,29 @@
 .in {
+  margin-top: 200px;
   text-align:center;
-  border: 10px;
+}
+#us{
+  margin: 10px;
+  color: blueviolet;
+}
+#pa{
+  margin: 10px;
+  color: gold;
+}
+#bu{
+  margin-top: 15px;
+  height:35px;
+  font-size: 25px;
+  padding: 1px 15px ;
+  color:rgb(0, 114, 19);
+  background-color: rgb(196, 230, 9);
 }
 
-
+label{
+  font-size:30px;
+}
+input{
+  background-color: rgba(141, 21, 91, 0.308);
+  font-size:15px;
+  color: rgb(1, 122, 122);
+}

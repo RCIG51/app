@@ -1,3 +1,20 @@
 .up{
   text-align: center;
+  margin-top: 200px;
+}
+#fu{
+
+}
+#em{
+
+}
+#ps{
+
+}
+#co{
+
+}
+label{
+  display:grid;
+  font-size:30px;
 }

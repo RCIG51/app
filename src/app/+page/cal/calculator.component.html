@@ -1,31 +1,23 @@
 <div class="cack">
-<div>{{oldNumber}} {{operator}}</div>
-<div>{{mainDisply}}</div>
-<div>
-</div>
-<div>
-  <button (click)="digitclick('7')">7</button>
-  <button (click)="digitclick('8')">8</button>
-  <button (click)="digitclick('9')">9</button>
-  <button (click)="operatorclick('+')">+</button>
-</div>
-<div>
-  <button (click)="digitclick('4')">4</button>
-  <button (click)="digitclick('5')">5</button>
-  <button (click)="digitclick('6')">6</button>
-  <button (click)="operatorclick('-')">-</button>
-</div>
-<div>
-<button (click)="digitclick('1')">1</button>
-<button (click)="digitclick('2')">2</button>
-<button (click)="digitclick('3')">3</button>
-<button (click)="operatorclick('*')">*</button>
-</div>
-<div>
-  <button (click)="digitclick('0')">0</button>
-  <button>.</button>
-  <button (click)="equal()">=</button>
-  <button (click)="operatorclick('/')">/</button>
-  <button (click)="celear()">C</button>
-</div>
+  <div id="old">{{ oldNumber }} {{ operator }}</div>
+  <div id="main">{{ mainDisply }}</div>
+  <div id="button">
+      <button (click)="digitclick('7')">7</button>
+      <button (click)="digitclick('8')">8</button>
+      <button (click)="digitclick('9')">9</button>
+      <button (click)="operatorclick('+')">+</button>
+      <button (click)="digitclick('4')">4</button>
+      <button (click)="digitclick('5')">5</button>
+      <button (click)="digitclick('6')">6</button>
+      <button (click)="operatorclick('-')">-</button>
+      <button (click)="digitclick('1')">1</button>
+      <button (click)="digitclick('2')">2</button>
+      <button (click)="digitclick('3')">3</button>
+      <button (click)="operatorclick('*')">*</button>
+      <button (click)="digitclick('0')">0</button>
+      <button>.</button>
+      <button (click)="equal()">=</button>
+      <button (click)="operatorclick('/')">/</button>
+      <button (click)="celear()">C</button>
+  </div>
 </div>
