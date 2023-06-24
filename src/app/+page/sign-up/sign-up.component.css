@@ -1,20 +1,23 @@
 .up{
   text-align: center;
   margin-top: 200px;
+
 }
 #fu{
-
+  margin: 10px;
 }
 #em{
-
+  margin: 10px;
 }
 #ps{
-
+  margin: 10px;
 }
 #co{
-
+  margin: 10px;
 }
 label{
-  display:grid;
   font-size:30px;
+}
+input{
+  font-size: 20px;
 }
