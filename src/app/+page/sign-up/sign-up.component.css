@@ -1,23 +1,52 @@
 .up{
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
 
 }
+#full{
+  margin-left: 3px;
+}
+#oi{
+  margin-left:120px;
+}
+#po{
+  margin-left: 100px;;
+}
+#email{
+  margin-left: 1px;
+}
 #fu{
+  color: darkmagenta;
   margin: 10px;
 }
 #em{
+  color: rgb(32, 139, 0);
   margin: 10px;
 }
 #ps{
+  color: rgb(0, 76, 139);
   margin: 10px;
 }
 #co{
+  color: rgb(139, 0, 0);
   margin: 10px;
 }
 label{
+  margin-right: 20px;
   font-size:30px;
 }
 input{
   font-size: 20px;
+  background-color: rgba(5, 193, 255, 0.582);
+  color: rgb(121, 104, 12);
+
+}
+#bu{
+  margin-right: 150px;
+  margin-top: 30px;
+  height:35px;
+  font-size: 25px;
+  padding: 1px 15px ;
+  color:rgb(0, 114, 19);
+  background-color: rgb(196, 230, 9);
 }
