@@ -9,6 +9,7 @@ import { SignInComponent } from './+page/sign-in/sign-in.component';
 import { SignUpComponent } from './+page/sign-up/sign-up.component';
 import { NotfoundComponent } from './+page/notfound/notfound.component';
 import { CalculatorComponent } from './+page/cal/calculator.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CalculatorComponent } from './+page/cal/calculator.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
