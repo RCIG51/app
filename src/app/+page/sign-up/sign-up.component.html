@@ -29,6 +29,10 @@
       />
     </div>
     <div>
+      <label for="Birthday">Birthday</label>
+      <input id="Birthday" type="date">
+    </div>
+    <div>
       <label>Gender:</label>
       <input [(ngModel)]="Gender" type="radio" value="Male" name="Ge" />Male
       <input
@@ -39,29 +43,11 @@
       />Females
     </div>
   </fieldset>
-  <fieldset *ngIf="">
-    <legend>Address Information</legend>
-    <textarea name="Address" cols="25" rows="5">Enter your Address:</textarea>
-    <div>
-      <label for="Number">house Number</label>
-      <input id="Number" type="number" placeholder="house Number" />
-    </div>
-    <div>
-      <input id="Ci" list="City" placeholder="Enter your City">
-      <datalist id="City">
-        <option>Theran</option>
-        <option>Hamedan</option>
-        <option>Mashhad</option>
-        <option>Asfehan</option>
-        <option>Tabrez</option>
-      </datalist>
-    </div>
-  </fieldset>
   <fieldset *ngIf="Gender == 'Females'">
     <legend>Ladies Information</legend>
     <div>
       Employment Status
-      <select [(ngModel)]="status">
+      <select [(ngModel)]="Status">
         <option>Housewife</option>
         <option>Retired</option>
         <option>Employee</option>
@@ -78,6 +64,24 @@
         <option>Student</option>
         <option>Engaged in service</option>
       </select>
+    </div>
+  </fieldset>
+  <fieldset *ngIf="Status!='' || Military">
+    <legend>Address Information</legend>
+    <textarea name="Address" cols="25" rows="5">Enter your Address:</textarea>
+    <div>
+      <label for="Number">house Number</label>
+      <input id="Number" type="number" placeholder="house Number" />
+    </div>
+    <div>
+      <input id="Ci" list="City" placeholder="Enter your City">
+      <datalist id="City">
+        <option>Theran</option>
+        <option>Hamedan</option>
+        <option>Mashhad</option>
+        <option>Asfehan</option>
+        <option>Tabrez</option>
+      </datalist>
     </div>
   </fieldset>
   <fieldset>
@@ -115,8 +119,6 @@
     <input [(ngModel)]="Iaccept" id="check" type="checkbox" />
   </div>
   <div>
-    <button [disabled]="Iaccept == false" onclick="alert('Welcome')">
-      login
-    </button>
+    <button id="Bu" [disabled]="Iaccept == false" onclick="alert('Welcome')">login</button>
   </div>
 </div>

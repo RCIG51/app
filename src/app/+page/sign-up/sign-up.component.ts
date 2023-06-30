@@ -12,7 +12,7 @@ export class SignUpComponent {
   NationalCode:string='';
   Gender:string='';
   Military:string='';
-  status:string=''
+  Status:string=''
   Password:string='';
   ConfirmPassword:string='';
   Iaccept:boolean=false;
