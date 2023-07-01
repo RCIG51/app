@@ -2,6 +2,7 @@
 #menu{
   background-color:darkcyan;
   text-align: center;
+  text-shadow: 3px 3px 5px blue;
 }
 #menu a:first-of-type{
   border-left: 2px solid white;
