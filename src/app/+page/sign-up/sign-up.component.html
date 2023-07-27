@@ -1,59 +1,104 @@
-<div class="up">
-  <fieldset>
+<div class="signup">
+  <fieldset id="parivate">
     <legend>private Information</legend>
     <div>
-      <label for="Name">First name:</label>
-      <input [(ngModel)]="Firstname"id="Name"placeholder="enter your Name"type="text"/>
-    </div>
-    <div>
-      <label for="Family Name">Last name:</label>
+      <label for="Name">First name:</label>&nbsp;
       <input
-        [(ngModel)]="Lastname"
-        id="Family Name"
-        placeholder="enter your Family Name"
+        [(ngModel)]="user.firstname"
+        id="Name"
+        placeholder="Enter your Name"
         type="text"
       />
     </div>
     <div>
-      <label for="NationalCode">National Code:</label>
+      <label for="Family Name">Last name:</label>&nbsp;
       <input
-        [(ngModel)]="NationalCode"
+        [(ngModel)]="user.lastname"
+        id="Family Name"
+        placeholder="Enter your Family Name"
+        type="text"
+      />
+    </div>
+    <div>
+      <label for="father">Father Name:</label>&nbsp;
+      <input
+        [(ngModel)]="user.father"
+        id="father"
+        type="text"
+        placeholder="Enter your father name"
+      />
+    </div>
+    <div>
+      <label for="Birthday">Birthday:</label>&nbsp;
+      <input [(ngModel)]="user.birth" id="Birthday" type="date" />
+    </div>
+    <div>
+      <label>Gender:</label>&nbsp;
+      <input
+        [(ngModel)]="user.gender"
+        type="radio"
+        value="Male"
+        name="Gender"
+      />Male
+      <input
+        [(ngModel)]="user.gender"
+        type="radio"
+        value="Females"
+        name="Gender"
+      />Females
+    </div>
+    <div>
+      <label for="NationalCode">National Code:</label>&nbsp;
+      <input
+        [(ngModel)]="user.nationalCode"
         id="NationalCode"
         placeholder="Enter your National Code"
         type="email"
       />
     </div>
     <div>
-      <label for="Birthday">Birthday</label>
-      <input id="Birthday" type="date">
+      Marital status :
+      <select [(ngModel)]="user.marital" name="Marital status">
+        <option>Single</option>
+        <option>Married</option>
+      </select>
     </div>
     <div>
-      <label>Gender:</label>
-      <input [(ngModel)]="Gender" type="radio" value="Male" name="Ge" />Male
+      your work:
+      <select [(ngModel)]="user.work" name="work">
+        <option>Student/option></option>
+        <option>freelance job</option>
+        <option>government job</option>
+        <option>Housewifery</option>
+        <option>Retired</option>
+      </select>
+    </div>
+    <div>
+      <label>your mobile phone:</label>
       <input
-        [(ngModel)]="Gender"
-        type="radio"
-        value="Females"
-        name="Ge"
-      />Females
+        [(ngModel)]="user.mobile"
+        type="text"
+        placeholder="Enter your phone mobile"
+      />
     </div>
   </fieldset>
-  <fieldset *ngIf="Gender == 'Females'">
+  <fieldset *ngIf="user.gender == 'Females'">
     <legend>Ladies Information</legend>
     <div>
       Employment Status
-      <select [(ngModel)]="Status">
+      <select [(ngModel)]="user.status">
         <option>Housewife</option>
         <option>Retired</option>
         <option>Employee</option>
       </select>
     </div>
   </fieldset>
-  <fieldset *ngIf="Gender == 'Male'">
+  <fieldset *ngIf="user.gender == 'Male'">
     <legend>Information Gentlemen</legend>
     <div>
-      Military status
-      <select [(ngModel)]="Military" size="3">
+      Military status:
+      <select [(ngModel)]="user.military" size="3">
+        &nbsp;
         <option>Exempt</option>
         <option>End of service</option>
         <option>Student</option>
@@ -61,59 +106,65 @@
       </select>
     </div>
   </fieldset>
-  <fieldset *ngIf="Status!='' || Military">
+  <fieldset class="Address">
     <legend>Address Information</legend>
-    <textarea name="Address" cols="25" rows="5">Enter your Address:</textarea>
+    <textarea
+      name="Address"
+      cols="20"
+      rows="4"
+      placeholder="Enter your Address:"
+    ></textarea
+    >&nbsp;
     <div>
-      <label for="Number">house Number</label>
+      <label for="Number">house Number:</label>&nbsp;
       <input id="Number" type="number" placeholder="house Number" />
     </div>
     <div>
-      <input id="Ci" list="City" placeholder="Enter your City">
+      <label>Country of Residence:</label>&nbsp;
+      <input id="Ci" list="City" placeholder="Enter your Country" />
       <datalist id="City">
-        <option>Theran</option>
-        <option>Hamedan</option>
-        <option>Mashhad</option>
-        <option>Asfehan</option>
-        <option>Tabrez</option>
+        <option>Canada</option>
+        <option>Iran</option>
+        <option>Sweden</option>
+        <option>Germany</option>
+        <option>America</option>
+        <option>Turkey</option>
+        <option>Russia</option>
+        <option>Austria</option>
+        <option>Dubai</option>
+        <option>China</option>
+        <option>Mexico</option>
+        <option>Iceland</option>
+        <option>Singapore</option>
+        <option>united kingdom</option>
       </datalist>
     </div>
   </fieldset>
-  <fieldset>
-    <legend>Security</legend>
+  <Fieldset>
+    <Legend>security</Legend>
     <div>
-      <label for="Email">Email:</label>
-      <input
-        [(ngModel)]="Email"
-        id="Email"
-        placeholder="Enter your Email"
-        type="email"
-      />
+      <label for="Email">Email</label>
+      <input [(ngModel)]="user.email" id="Email" type="email" placeholder="Enter your Email">
+    </div>
+    <div>
+      <label for="UserName">UserName</label>
+      <input [(ngModel)]="user.username" id="UserName" type="text" placeholder="Enter your UserName">
     </div>
     <div>
       <label for="Password">Password</label>
-      <input
-        [(ngModel)]="Password"
-        id="Password"
-        placeholder="Enter your Password"
-        type="password"
-      />
+      <input [(ngModel)]="user.password" id="Password" type="password" placeholder="Enter your Password">
     </div>
     <div>
-      <label for="ConfirmPassword">Confirm Password</label>
-      <input
-        [(ngModel)]="ConfirmPassword"
-        id="ConfirmPassword"
-        placeholder="Enter Confirm Password"
-        type="password"
-      />
+      <label for="Confirm">ConfirmPassword</label>
+      <input [(ngModel)]="user.confirmPassword" id="Confirm" type="password" placeholder="Enter your ConfirmPassword">
     </div>
-  </fieldset>
-  <div *ngIf="Password != '' && ConfirmPassword != ''">
-    <label for="check">I accept the terms</label>
-    <input [(ngModel)]="Iaccept" id="check" type="checkbox" />
+  </Fieldset>
+  <div *ngIf="chek()"></div>
+  <div *ngIf="checkbox==true">
+    <label for="chek">I accept the rules</label>
+    <input [(ngModel)]="user.iaccept"  id="chek" type="checkbox">
   </div>
   <div>
-    <button id="Bu" [disabled]="Iaccept == false" onclick="alert('Welcome')">login</button>
+    <button [disabled]="user.iaccept==false">signup</button>
   </div>
 </div>

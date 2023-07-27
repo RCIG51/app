@@ -10,6 +10,7 @@ import { SignUpComponent } from './+page/sign-up/sign-up.component';
 import { NotfoundComponent } from './+page/notfound/notfound.component';
 import { CalculatorComponent } from './+page/cal/calculator.component';
 import { FormsModule } from '@angular/forms';
+import { SecurityComponent } from './+page/security/security.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     SignUpComponent,
     NotfoundComponent,
     CalculatorComponent,
+    SecurityComponent,
   ],
   imports: [
     BrowserModule,

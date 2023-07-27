@@ -1,17 +1,16 @@
-.up{
-  margin-left: 30px;
-  margin-top: 70px;
-  font-size: 17px;
+#parivate{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.Address{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.signup{
+  margin-left: 20px;
+  margin-top: 25px;
 }
 input{
   font-size:15px;
 }
-#Bu{
-  margin-top: 30px;
-  height:40px;
-  font-size: 25px;
-  padding: 1px 15px ;
-  color:rgb(0, 114, 19);
-  background-color: rgb(196, 230, 9);
-  margin-left: 40px;
-}
+
