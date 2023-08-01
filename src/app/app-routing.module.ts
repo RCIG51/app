@@ -6,15 +6,14 @@ import { SignInComponent } from './+page/sign-in/sign-in.component';
 import { SignUpComponent } from './+page/sign-up/sign-up.component';
 import { NotfoundComponent } from './+page/notfound/notfound.component';
 import { CalculatorComponent } from './+page/cal/calculator.component';
-import { SecurityComponent } from './+page/security/security.component';
+import { combineLatest } from 'rxjs';
 
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
-  {path:'sign-in',component:SignInComponent},
-  {path:'sign-up',component:SignUpComponent},
-  {path:'security',component:SecurityComponent},
+  {path:'signin',component:SignInComponent},
+  {path:'signup',component:SignUpComponent},
   {path:'not-found',component:NotfoundComponent},
   {path:'Calculator',component:CalculatorComponent},
   // اگه کاربر هیچی رو سرچ کنه
