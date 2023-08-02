@@ -10,9 +10,7 @@ export class SignUpComponent {
   checkbox: boolean = false;
   constructor(public service: UserService) {}
   user = new Applictionuser();
-  chek(){
-    if (this.user.password==this.user.confirmPassword) {
-      this.checkbox==true;
-    }
+  signup(){
+    this.service.signup(this.user);
   }
 }

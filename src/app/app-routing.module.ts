@@ -9,6 +9,7 @@ import { CalculatorComponent } from './+page/cal/calculator.component';
 import { combineLatest } from 'rxjs';
 
 
+
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
@@ -20,7 +21,7 @@ const routes: Routes = [
   // و استسنا pathMatch رو میزنیم و مقدار ان را full می کنیم
   {path:'',redirectTo:'/home',pathMatch:'full'},
   // اگه کاربر هرچی غیر از این هارا زد
-  {path:'**',redirectTo:'/not-found'}
+  {path:'**',redirectTo:'/not-found'},
 ];
 
 @NgModule({

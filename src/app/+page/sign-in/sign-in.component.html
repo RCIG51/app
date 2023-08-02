@@ -1,22 +1,25 @@
 <div id="continer">
-  <div class="in">
+  <div class="login">
     <div>
       <img src="./../../../assets/download (1).jpg">
     </div>
     <div id="us">
-      <label>username: </label>
-      <input placeholder=" please Enter username" type="text" />
+      <i class="fa fa-user"></i>
+      <input [(ngModel)]="username" placeholder=" please Enter username" type="text" />
     </div>
     <div id="pa">
-      <label>password: </label>
-      <input placeholder="please Eneter password" type="password" />
+      <i class="fa fa-lock"></i>
+      <input  [(ngModel)]="password" placeholder="please Eneter password" type="password" />
     </div>
-    <div>
-      <button class="bu">login</button>
-      <button class="bu" (click)="next()">signup</button>
+    <div id="button">
+      <button (click)="signin()" class="bu">login<i class="fa-solid fa-right-to-bracket"></i></button>
+      <button class="bu" (click)="next()"> signup<i class="fa-solid fa-door-open"></i></button>
     </div>
-    <div>
+    <div id="link">
       <a href="#">forget password</a>
+    </div>
+    <div>
+      {{message}}
     </div>
   </div>
 </div>

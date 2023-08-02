@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/+Service/user.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,8 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  constructor(private router:Router){}
+  username:string='';
+  password:string='';
+  message:string='';
+  constructor(private users:UserService,private router:Router){}
   next(){
     this.router.navigate(['/signup']);
+  }
+  signin(){
+    var isok=this.users.signin(this.username,this.password);
+    if (isok==false) {
+      this.message='username/password is invalid';
+    }
+    else{
+      this.message='Welcome';
+    }
   }
 }

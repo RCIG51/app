@@ -1,4 +1,7 @@
 <div class="signup">
+  <div>
+    <img src="./../../../assets/download (2).jpg">
+  </div>
   <fieldset id="parivate">
     <legend>private Information</legend>
     <div>
@@ -159,38 +162,11 @@
       <input [(ngModel)]="user.confirmPassword" id="Confirm" type="password" placeholder="Enter your ConfirmPassword">
     </div>
   </Fieldset>
-  <div *ngIf="chek()"></div>
-  <div *ngIf="checkbox==true">
+  <div *ngIf="user.password==user.confirmPassword && user.username!=''">
     <label for="chek">I accept the rules</label>
     <input [(ngModel)]="user.iaccept"  id="chek" type="checkbox">
   </div>
   <div>
-    <button [disabled]="user.iaccept==false">Signup</button>
-  </div><Fieldset>
-    <Legend>security</Legend>
-    <div>
-      <label for="Email">Email</label>
-      <input [(ngModel)]="user.email" id="Email" type="email" placeholder="Enter your Email">
-    </div>
-    <div>
-      <label for="UserName">UserName</label>
-      <input [(ngModel)]="user.username" id="UserName" type="text" placeholder="Enter your UserName">
-    </div>
-    <div>
-      <label for="Password">Password</label>
-      <input [(ngModel)]="user.password" id="Password" type="password" placeholder="Enter your Password">
-    </div>
-    <div>
-      <label for="Confirm">ConfirmPassword</label>
-      <input [(ngModel)]="user.confirmPassword" id="Confirm" type="password" placeholder="Enter your ConfirmPassword">
-    </div>
-  </Fieldset>
-  <div *ngIf="chek()"></div>
-  <div *ngIf="checkbox==true">
-    <label for="chek">I accept the rules</label>
-    <input [(ngModel)]="user.iaccept"  id="chek" type="checkbox">
-  </div>
-  <div>
-    <button [disabled]="user.iaccept==false">Signup</button>
+    <button (click)="signup()" [disabled]="user.iaccept==false">Signup</button>
   </div>
 </div>

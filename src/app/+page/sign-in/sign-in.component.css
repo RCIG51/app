@@ -2,8 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
 }
-.in{
+.login{
+  border-radius: 3vh;
   width: 30%;
   background-color: white;
+}
+.login img{
+  border-radius: 3vh;
+  width: 100%;
+}
+input{
+  margin:1%;
+  border-radius:1vh;
+}
+#button{
+  margin-top:1vh;
+  margin-left: 10vw;
+}
+#link{
+  margin-left: 10vw;
 }
