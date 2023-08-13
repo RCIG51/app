@@ -5,25 +5,28 @@ import { Applictionuser } from '../+models/applictionUser';
   providedIn: 'root'
 })
 export class UserService {
+  username:string='admin';
+  password:string='admin';
+  Message:boolean=false;
   constructor() {}
-  signup(user:Applictionuser){
+  user=new Applictionuser;
+  signup(){
     let users:Applictionuser[]=JSON.parse(localStorage.getItem('users')?? '[]');
-    users.push(user);
+    users.push(this.user);
     localStorage.setItem('users',JSON.stringify(users));
+  }
+  admin(username:string,password:string){
+    if (username==this.username && password==this.password) {
+      this.Message=true;
+    }
   }
   signin(username:string,password:string){
     let users:Applictionuser[]=JSON.parse(localStorage.getItem('users')?? '[]');
-    let result=users.filter(m=> m.username==username && password==password);
+    let result=users.filter(m=> m.username==username && m.password==password);
     if (result.length==0) {
       return false;
     }
     return true;
   }
-  // save(email:string,password:string,confirmPassword:string,username:string,iaccept:boolean){
-  //   this.user.email==email;
-  //   this.user.password==password;
-  //   this.user.confirmPassword==confirmPassword;
-  //   this.user.username==username;
-  //   this.user.iaccept==iaccept;
-  // }
+
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/+Service/user.service';
 import { Applictionuser } from 'src/app/+models/applictionUser';
 @Component({
@@ -8,9 +9,8 @@ import { Applictionuser } from 'src/app/+models/applictionUser';
 })
 export class SignUpComponent {
   checkbox: boolean = false;
-  constructor(public service: UserService) {}
-  user = new Applictionuser();
-  signup(){
-    this.service.signup(this.user);
+  constructor(public service: UserService,public router:Router) {}
+  next(){
+    this.router.navigate(['/security']);
   }
 }

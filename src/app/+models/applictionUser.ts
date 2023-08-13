@@ -9,7 +9,6 @@ export class Applictionuser{
   status:string=''
   password:string='';
   birth:string='';
-  marital:string='';
   work:string='';
   username:string='';
   mobile:string='';

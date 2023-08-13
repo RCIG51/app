@@ -1,0 +1,26 @@
+<Fieldset>
+  <Legend>security</Legend>
+  <div>
+    <label for="Email">Email</label>
+    <input [(ngModel)]="service.user.email" id="Email" type="email" placeholder="Enter your Email">
+  </div>
+  <div>
+    <label for="UserName">UserName</label>
+    <input [(ngModel)]="service.user.username" id="UserName" type="text" placeholder="Enter your UserName">
+  </div>
+  <div>
+    <label for="Password">Password</label>
+    <input [(ngModel)]="service.user.password" id="Password" type="password" placeholder="Enter your Password">
+  </div>
+  <div>
+    <label for="Confirm">ConfirmPassword</label>
+    <input [(ngModel)]="service.user.confirmPassword" id="Confirm" type="password" placeholder="Enter your ConfirmPassword">
+  </div>
+</Fieldset>
+<div *ngIf="service.user.password==service.user.confirmPassword && service.user.username!=''">
+  <label for="chek">I accept the rules</label>
+  <input [(ngModel)]="service.user.iaccept"  id="chek" type="checkbox">
+</div>
+<div>
+  <button (click)="signup()" [disabled]="service.user.iaccept==false">Signup</button>
+</div>

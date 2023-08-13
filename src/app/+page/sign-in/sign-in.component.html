@@ -12,14 +12,12 @@
       <input  [(ngModel)]="password" placeholder="please Eneter password" type="password" />
     </div>
     <div id="button">
+      <button (click)="admin()">admin login<i class="fa-solid fa-server"></i></button>
       <button (click)="signin()" class="bu">login<i class="fa-solid fa-right-to-bracket"></i></button>
       <button class="bu" (click)="next()"> signup<i class="fa-solid fa-door-open"></i></button>
     </div>
     <div id="link">
       <a href="#">forget password</a>
-    </div>
-    <div>
-      {{message}}
     </div>
   </div>
 </div>

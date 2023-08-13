@@ -7,6 +7,9 @@ import { SignUpComponent } from './+page/sign-up/sign-up.component';
 import { NotfoundComponent } from './+page/notfound/notfound.component';
 import { CalculatorComponent } from './+page/cal/calculator.component';
 import { combineLatest } from 'rxjs';
+import { SecurityComponent } from './+page/security/security.component';
+import { ProfileComponent } from './+page/profile/profile.component';
+import { InformationComponent } from './+page/information/information.component';
 
 
 
@@ -14,6 +17,9 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'signin',component:SignInComponent},
+  {path:'security',component:SecurityComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'information',component:InformationComponent},
   {path:'signup',component:SignUpComponent},
   {path:'not-found',component:NotfoundComponent},
   {path:'Calculator',component:CalculatorComponent},
