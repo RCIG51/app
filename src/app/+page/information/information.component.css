@@ -1,0 +1,10 @@
+.information{
+  background-color: white;
+  border: 1px solid grey;
+  padding:2vw;
+  margin: 2vw;
+}
+label{
+  font-size:x-large;
+  color: rgb(182, 140, 3);
+}

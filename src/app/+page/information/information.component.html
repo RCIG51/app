@@ -1,1 +1,19 @@
-<p>information works!</p>
+<div class="information">
+  <div class="avatar">
+    <img *ngIf="user?.gender=='Male'"  src="./../../../assets/Iconshock-Windows-7-General-Administrator.48.png">
+    <img *ngIf="user?.gender=='Females'" src="./../../../assets/Icons-Land-Vista-People-Office-Customer-Female-Light.48.png ">
+  </div>
+  <div>
+    <label>firstname:</label>
+    <h2>{{user?.firstname}}</h2>
+    <label>Emali:</label>
+    <h5>{{user?.email}}</h5>
+    <label>username:</label>
+    <h3>{{user?.username}}</h3>
+    <label>password:</label>
+    <h6>{{user?.password}}</h6>
+  </div>
+  <div>
+    <button (click)="onRemove.emit(user)">remove</button>
+  </div>
+</div>

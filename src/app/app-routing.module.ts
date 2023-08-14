@@ -10,6 +10,7 @@ import { combineLatest } from 'rxjs';
 import { SecurityComponent } from './+page/security/security.component';
 import { ProfileComponent } from './+page/profile/profile.component';
 import { InformationComponent } from './+page/information/information.component';
+import { InformationsComponent } from './+page/informations/informations.component';
 
 
 
@@ -19,7 +20,7 @@ const routes: Routes = [
   {path:'signin',component:SignInComponent},
   {path:'security',component:SecurityComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'information',component:InformationComponent},
+  {path:'informations',component:InformationsComponent},
   {path:'signup',component:SignUpComponent},
   {path:'not-found',component:NotfoundComponent},
   {path:'Calculator',component:CalculatorComponent},

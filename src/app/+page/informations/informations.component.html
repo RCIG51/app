@@ -1,0 +1,3 @@
+<div class="informations">
+  <app-information *ngFor="let item of users.list()" (onRemove)="remove($event)" [user]="item"/>
+</div>

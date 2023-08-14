@@ -28,5 +28,18 @@ export class UserService {
     }
     return true;
   }
+  creat(user:Applictionuser){
 
+  }
+  list():Applictionuser[]{
+    let users:Applictionuser[]=JSON.parse(localStorage.getItem('users')?? '[]');
+    return users;
+  }
+  update(user:Applictionuser){
+
+  }
+  remove(user:Applictionuser){
+    let users:Applictionuser[]=JSON.parse(localStorage.getItem('users')?? '[]');
+    let data=users.filter(m=> m.nationalCode!=user.nationalCode);
+    localStorage.setItem('users',JSON.stringify(data));  }
 }

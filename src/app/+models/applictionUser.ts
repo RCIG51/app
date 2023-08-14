@@ -9,9 +9,7 @@ export class Applictionuser{
   status:string=''
   password:string='';
   birth:string='';
-  work:string='';
   username:string='';
-  mobile:string='';
   confirmPassword:string='';
   iaccept:boolean=false;
 }

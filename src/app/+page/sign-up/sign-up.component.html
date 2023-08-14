@@ -41,13 +41,13 @@
         [(ngModel)]="service.user.gender"
         type="radio"
         value="Male"
-        name="Gender"
+        name="gender"
       />Male
       <input
         [(ngModel)]="service.user.gender"
         type="radio"
         value="Females"
-        name="Gender"
+        name="gender"
       />Females
     </div>
     <div>
@@ -57,24 +57,6 @@
         id="NationalCode"
         placeholder="Enter your National Code"
         type="email"
-      />
-    </div>
-    <div>
-      your work:
-      <select [(ngModel)]="service.user.work" name="work">
-        <option>Student</option>
-        <option>freelance job</option>
-        <option>government job</option>
-        <option>Housewifery</option>
-        <option>Retired</option>
-      </select>
-    </div>
-    <div>
-      <label>your mobile phone:</label>
-      <input
-        [(ngModel)]="service.user.mobile"
-        type="text"
-        placeholder="Enter your phone mobile"
       />
     </div>
   </fieldset>

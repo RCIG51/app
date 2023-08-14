@@ -15,13 +15,16 @@ export class SignInComponent {
     this.router.navigate(['/signup']);
   }
   admin(){
-  this.users.admin(this.username,this.password);
-  this.router.navigate(['/information']);
-   if (this.users.Message==true) {
+    this.users.admin(this.username,this.password);
+    if (this.users.Message==true) {
+    this.router.navigate(['/informations']);
     alert('welcome admin');
+    }
+    else{
+    alert('you are not admin');
    }
   }
-  signin() {
+  signin(){
     var isok = this.users.signin(this.username, this.password);
     if (isok == false) {
       alert('username/password is invalid');

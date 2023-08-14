@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { SecurityComponent } from './+page/security/security.component';
 import { ProfileComponent } from './+page/profile/profile.component';
 import { InformationComponent } from './+page/information/information.component';
+import { InformationsComponent } from './+page/informations/informations.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { InformationComponent } from './+page/information/information.component'
     SecurityComponent,
     ProfileComponent,
     InformationComponent,
+    InformationsComponent,
   ],
   imports: [
     BrowserModule,
